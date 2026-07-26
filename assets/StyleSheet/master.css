@@ -1,0 +1,699 @@
+:root {
+    --textblack: #151515;
+    --textlight: #555555;
+    --textlight2: #7e7e7e;
+    --textpurple: #7533ff;
+    --bggreen: #3cffd0;
+    --bgblue: #5200ff;
+    /* --:; */
+    /* --:; */
+    /* --:; */
+}
+
+@font-face {
+    font-family: anton;
+    src: url(../Font/Anton/Anton-Regular.ttf);
+}
+
+@font-face {
+    font-family: cormorant;
+    src: url(../Font/Cormorant_Garamond/CormorantGaramond-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: ibm;
+    src: url(../Font/IBM_Plex_Mono/IBMPlexMono-Thin.ttf);
+}
+
+@font-face {
+    font-family: manrope;
+    src: url(../Font/Manrope/Manrope-VariableFont_wght.ttf);
+}
+
+body {
+    /* background-color: #f6f6f6; */
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*==================# HEADER STYLE ==================*/
+/*===================================================*/
+header {
+    width: 100%;
+    margin: 250px 0 0;
+    background-color: white;
+    box-shadow: 0 -7px 10px  #dbdbdbb4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: start;
+    text-transform: capitalize;
+
+
+    >div {
+        max-width: 1250px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        width: 100%;
+
+        /*==================#1-1 SUB STYLE ==================*/
+        &:first-of-type {
+            column-gap: 20px;
+            padding: 10px 0;
+
+            >a {
+                font-size: 12px;
+                font-family: manrope;
+                font-weight: 600;
+                transition: 0.4s;
+
+                &:first-of-type {
+                    background-color: var(--bgblue);
+                    color: white;
+                    padding: 5px;
+                    border-radius: 3px;
+
+                    &:hover {
+                        background-color: #636363;
+                    }
+                }
+
+                &:last-of-type {
+                    color: var(--textblack);
+
+                    >i {
+                        color: var(--bgblue);
+                        font-size: 13px;
+                        margin-right: 7px;
+                        text-decoration: none;
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        /*==================#1-2 MENU STYLE ==================*/
+        &:nth-of-type(2) {
+
+            >nav {
+                >ul {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 12px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid var(--textblack);
+
+                    >li {
+
+                        >a {
+                            font-size: 19px;
+                            color: var(--textblack);
+                            font-family: manrope;
+                            font-weight: 300;
+                            transition: 0.4s;
+
+                            figure {
+                                width: 130px;
+                                height: 30px;
+
+                                >img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+
+                        &:nth-of-type(even) {
+                            font-size: 30px;
+                        }
+
+                        &:nth-of-type(15) {
+                            >a {
+                                font-size: 25px;
+                            }
+                        }
+
+                        &:last-of-type {
+                            >a {
+                                padding-right: 0;
+                                font-size: 25px;
+                            }
+                        }
+
+                        &:hover {
+                            >a {
+                                color: var(--textlight2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*==================# MAIN CONTENT STYLE ==================*/
+/*=========================================================*/
+main {
+    max-width: 840px;
+    width: 66.403%;
+    min-height: 600vh;
+    padding-top: 50px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    justify-content: center;
+    position: relative;
+
+
+    >section {
+        display: flex;
+        margin-right: 40px;
+        width: 100%;
+
+        /*==================#2-1 HERO STYLE ==================*/
+        &:first-of-type {
+            flex-wrap: wrap;
+            align-content: start;
+            justify-content: end;
+            position: relative;
+
+            >figure {
+
+                &:first-of-type {
+                    width: 680px;
+                    height: 540px;
+                    position: relative;
+                    margin-bottom: 330px;
+
+                    a {
+                        >img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+
+                        >figcaption {
+                            position: absolute;
+                            display: flex;
+                            flex-wrap: wrap;
+                            padding: 10px;
+                            width: 510px;
+                            left: 50%;
+                            top: 100%;
+                            transform: translate(-50%, 0);
+                            box-shadow: 0 10px 15px #dbdbdbb4;
+                            gap: 15px 15px;
+
+                            >h1 {
+                                width: 100%;
+                                font-size: 50px;
+                                color: var(--textblack);
+                                font-weight: 900;
+                                font-family: anton;
+                                line-height: 1;
+                            }
+
+                            >span {
+                                color: var(--textlight);
+                                font-size: 12px;
+
+                                >i {
+                                    color: var(--textpurple);
+                                }
+
+                                &:first-of-type {
+                                    width: 100%;
+                                    font-family: marope;
+                                    font-size: 27px;
+                                    line-height: 1;
+                                }
+
+                                &:nth-of-type(2) {
+                                    text-transform: capitalize;
+                                    font-size: 13px;
+                                    color: var(--textpurple);
+                                }
+
+                            }
+                        }
+
+                        &:hover {
+
+                            >figcaption {
+
+                                >h1 {
+                                    text-shadow: 10px 10px 0px #3cffd0;
+                                }
+
+                                >span {
+                                    &:last-of-type {
+                                        text-shadow: 0 5px 0 var(--bggreen);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                &:last-of-type {
+                    position: absolute;
+                    height: 160px;
+                    width: 660px;
+                    transform: rotate(-90deg);
+                    top: 195px;
+                    left: -254px;
+
+                    >img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            >a {
+                padding: 20px 20px;
+                margin: 10px 0;
+                display: flex;
+                width: 50%;
+                column-gap: 15px;
+                justify-content: end;
+                align-items: center;
+
+                >img {
+                    width: 70px;
+                    height: 90px;
+                    object-fit: cover;
+                }
+
+                >div {
+                    height: 70px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: center;
+                    gap: 5px 15px;
+
+                    >h6 {
+                        width: 100%;
+                        color: var(--textblack);
+                        font-size: 20px;
+                        font-family: manrope;
+                        font-weight: 900;
+                    }
+
+                    >span {
+                        font-size: 12px;
+
+                        &:first-of-type {
+                            color: var(--textpurple);
+                            text-transform: capitalize;
+                        }
+
+                        &:last-of-type {
+                            color: var(--textlight);
+                        }
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    border-left: 1px solid rgb(207, 207, 207);
+                }
+
+                &:nth-of-type(3) {
+
+                    >div {
+                        >h6 {
+                            font-size: 19px;
+                        }
+                    }
+
+                }
+
+                &:nth-of-type(4) {
+                    border-left: 1px solid rgb(207, 207, 207);
+
+                    >div {
+                        >h6 {
+                            font-size: 19px;
+                        }
+                    }
+                }
+
+                &:hover {
+                    >div {
+                        >h6 {
+                            text-decoration: underline;
+                            text-decoration-color: var(--bgblue);
+                        }
+                    }
+                }
+
+            }
+
+            >div {
+                position: absolute;
+                width: 87%;
+                height: 1px;
+                bottom: 150px;
+                left: 30px;
+                background-color: rgb(207, 207, 207);
+            }
+        }
+
+        /*==================#2-2,3 THE REPEATING SECTIONS 1 STYLE ==================*/
+        &:nth-of-type(2),
+        &:nth-of-type(3),
+        &:nth-of-type(5),
+        &:nth-of-type(6) {
+            border-top: 3px solid var(--textpurple);
+            margin-top: 50px;
+            padding-top: 10px;
+            flex-wrap: wrap;
+            row-gap: 30px;
+
+            >* {
+                width: 100%;
+            }
+
+            >h3 {
+                font-size: 25px;
+                font-weight: 300;
+
+                >span {
+                    &:first-of-type {
+                        color: var(--textblack);
+                        font-weight: 700;
+                    }
+
+                    &:last-of-type {
+                        color: var(--bgblue);
+                    }
+                }
+            }
+
+            >div {
+                padding-left: 50px;
+                display: flex;
+                justify-content: space-between;
+
+
+                >figure {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: start;
+                    width: 50%;
+
+                    >a {
+                        >img {
+                            width: 100%;
+                            height: 370px;
+                            object-fit: cover;
+                        }
+
+                        >figcaption {
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-content: start;
+                            gap: 10px;
+                            font-family: manrope;
+                            line-height: 1.1;
+
+                            >h6 {
+                                width: 100%;
+                                font-size: 26px;
+                                font-weight: 700;
+                                color: var(--textblack);
+                                margin-top: 10px;
+                            }
+
+                            >p {
+                                width: 100%;
+                                font-size: 23px;
+                                font-weight: 300;
+                                color: var(--textblack);
+                            }
+
+                            >span {
+                                font-size: 14px;
+
+                                &:first-of-type {
+                                    color: var(--textpurple);
+                                }
+
+                                &:last-of-type {
+                                    color: var(--textlight);
+                                }
+                            }
+                        }
+
+                    }
+
+                    &:hover {
+                        >a {
+
+
+
+                            >figcaption {
+                                >h6 {
+                                    text-shadow: 5px 5px 0px #3cffd0;
+                                }
+
+                                >span {
+                                    &:last-of-type {
+                                        text-shadow: 0px 5px 0 var(--bggreen);
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+                >div {
+                    width: 47%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: start;
+
+                    >div {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 20px 0;
+
+                        >a {
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-content: start;
+                            gap: 10px;
+                            width: 80%;
+                            transition: 0.4s;
+
+                            >span {
+                                font-family: manrope;
+                                font-size: 12px;
+                                line-height: 1;
+
+                                &:first-of-type {
+                                    font-size: 18px;
+                                    font-weight: 900;
+                                }
+
+                                &:nth-of-type(2) {
+                                    font-size: 16px;
+                                    font-weight: 300;
+                                }
+
+                                &:nth-of-type(3) {
+                                    color: var(--textpurple);
+                                }
+                            }
+
+                            &:hover {
+
+                                >span {
+                                    &:first-of-type {
+                                        text-decoration: underline;
+                                        text-decoration-color: var(--bgblue);
+                                    }
+
+                                    &:last-of-type {
+                                        text-shadow: 3px 3px 0 var(--bggreen);
+                                    }
+                                }
+                            }
+                        }
+
+                        >img {
+                            width: 70px;
+                            height: 70px;
+                            object-fit: cover;
+                        }
+
+                        &:nth-of-type(2) {
+                            border-top: 1px solid var(--textlight2);
+                            border-bottom: 1px solid var(--textlight2);
+                        }
+                    }
+                }
+            }
+
+        }
+
+        /*==================#2-4 MOST POPULAR STYLE ==================*/
+        &:nth-of-type(4) {
+            flex-wrap: wrap;
+            align-content: start;
+            border-top: 3px solid var(--textpurple);
+            font-family: manrope;
+            padding-top: 10px;
+            margin-top: 80px;
+
+            >h3 {
+                text-transform: capitalize;
+                font-size: 24px;
+                color: #131313;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+
+            >a {
+                display: flex;
+                width: 100%;
+                gap: 20px;
+                padding: 20px 30px;
+
+                >span {
+                    width: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 50px;
+                    border-radius: 3px;
+                    background-color: #eee6ff;
+                    font-size: 25px;
+                }
+
+                >div {
+
+                    >p {
+                        font-size: 18px;
+                        font-weight: 900;
+                        transition: 0.4s;
+                    }
+
+                    >span {
+                        font-size: 12px;
+
+                        &:first-of-type {
+                            color: var(--textpurple);
+                        }
+
+                        &:last-of-type {
+                            color: var(--textlight);
+                        }
+                    }
+                }
+
+
+                &:nth-of-type(2),
+                &:nth-of-type(4) {
+                    border-top: 1px solid rgb(207, 207, 207);
+                    border-bottom: 1px solid rgb(207, 207, 207);
+                }
+
+                &:hover {
+                    >div {
+
+                        >p {
+                            text-decoration: underline;
+                            text-decoration-color: var(--textpurple);
+                        }
+                    }
+                }
+            }
+        }
+
+        /*==================#- THE REPEATING SECTIONS 2 STYLE ==================*/
+        &:nth-of-type(7),
+        &:nth-of-type(8),
+        &:nth-of-type(9),
+        &:nth-of-type(10),
+        &:nth-of-type(11),
+        &:nth-of-type(12) {
+            border-top: 3px solid var(--textpurple);
+            margin-top: 50px;
+            padding-top: 10px;
+            flex-wrap: wrap;
+            align-content: start;
+            row-gap: 30px;
+
+            >h3 {
+                width: 100%;
+                font-size: 25px;
+                color: var(--textblack);
+                font-weight: 700;
+                text-transform: capitalize;
+            }
+
+            >figure {
+                width: 25%;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: start;
+                padding: 0 10px;
+                gap: 10px;
+                cursor: pointer;
+
+                >img {
+                    width: 100%;
+                    height: 40%;
+                    object-fit: cover;
+                }
+
+                >figcaption {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+
+                    >p {
+                        font-size: 20px;
+                        color: var(--textblack);
+                        font-weight: 700;
+                    }
+
+                    >span {
+                        font-size: 12px;
+
+                        &:first-of-type {
+                            color: var(--textpurple);
+                        }
+
+                        &:last-of-type {
+                            color: var(--textlight);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+/*==================#3 LATEST STYLE ==================*/
+/*====================================================*/
+aside {
+    width: 33.597%;
+    max-width: 410px;
+    position: sticky;
+    top: 5px;
+    border-left: 1px solid rgb(207, 207, 207);
+}
