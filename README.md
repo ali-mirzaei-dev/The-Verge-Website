@@ -1,6 +1,6 @@
 # 📰 The Verge Website
 
-This project is currently under development and is being recreated as part of my journey to improve my HTML and CSS skills.
+This project is a front-end practice project recreated as part of my journey to improve my HTML and CSS skills by building modern, interactive website layouts.
 
 ## 🚀 Live Demo
 
@@ -10,15 +10,11 @@ This project is currently under development and is being recreated as part of my
 
 ### Header
 
-Screenshot coming soon.
+![Header](https://github.com/user-attachments/assets/c36a6809-f973-4cbf-b0cf-9bd61e867e61)
 
 ### Content Section
 
-Screenshot coming soon.
-
-### Footer
-
-Screenshot coming soon.
+![Content Section](https://github.com/user-attachments/assets/7e816b4a-050f-45de-904a-6adf3c9efb03)
 
 ## 🎯 Project Goal
 
@@ -38,7 +34,7 @@ The purpose of this project is to practice:
 
 ## 📌 Project Status
 
-* 🚧 In Progress
+*  ✔ Completed
 * ❌ Not responsive (desktop-only)
 * 🔄 Future improvement: add responsiveness and JavaScript features
 
