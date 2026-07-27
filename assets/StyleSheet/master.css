@@ -5,9 +5,6 @@
     --textpurple: #7533ff;
     --bggreen: #3cffd0;
     --bgblue: #5200ff;
-    /* --:; */
-    /* --:; */
-    /* --:; */
 }
 
 @font-face {
@@ -30,6 +27,31 @@
     src: url(../Font/Manrope/Manrope-VariableFont_wght.ttf);
 }
 
+@keyframes flicker {
+
+    0%,
+    28%,
+    100% {
+        opacity: 1;
+        background-color: rgba(187, 187, 187, 0.39);
+    }
+
+    25%,
+    26%,
+    27% {
+        opacity: 0;
+        background-color: #3cffd186;
+    }
+
+    25.5%,
+    26.5%,
+    27.5% {
+        opacity: 1;
+        background-color: #3cffd186;
+    }
+
+}
+
 body {
     /* background-color: #f6f6f6; */
     justify-content: center;
@@ -37,19 +59,18 @@ body {
     flex-wrap: wrap;
 }
 
-/*==================# HEADER STYLE ==================*/
+/*==================#1 HEADER STYLE ==================*/
 /*===================================================*/
 header {
     width: 100%;
     margin: 250px 0 0;
     background-color: white;
-    box-shadow: 0 -7px 10px  #dbdbdbb4;
+    box-shadow: 0 -7px 10px #dbdbdbb4;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: start;
     text-transform: capitalize;
-
 
     >div {
         max-width: 1250px;
@@ -101,6 +122,7 @@ header {
         &:nth-of-type(2) {
 
             >nav {
+
                 >ul {
                     display: flex;
                     align-items: center;
@@ -158,12 +180,11 @@ header {
     }
 }
 
-/*==================# MAIN CONTENT STYLE ==================*/
+/*==================#2 MAIN CONTENT STYLE ==================*/
 /*=========================================================*/
 main {
     max-width: 840px;
     width: 66.403%;
-    min-height: 600vh;
     padding-top: 50px;
     background-color: white;
     display: flex;
@@ -171,7 +192,6 @@ main {
     align-content: start;
     justify-content: center;
     position: relative;
-
 
     >section {
         display: flex;
@@ -241,7 +261,6 @@ main {
                                     font-size: 13px;
                                     color: var(--textpurple);
                                 }
-
                             }
                         }
 
@@ -261,7 +280,6 @@ main {
                             }
                         }
                     }
-
                 }
 
                 &:last-of-type {
@@ -335,7 +353,6 @@ main {
                             font-size: 19px;
                         }
                     }
-
                 }
 
                 &:nth-of-type(4) {
@@ -356,7 +373,6 @@ main {
                         }
                     }
                 }
-
             }
 
             >div {
@@ -404,7 +420,6 @@ main {
                 padding-left: 50px;
                 display: flex;
                 justify-content: space-between;
-
 
                 >figure {
                     display: flex;
@@ -454,13 +469,10 @@ main {
                                 }
                             }
                         }
-
                     }
 
                     &:hover {
                         >a {
-
-
 
                             >figcaption {
                                 >h6 {
@@ -473,7 +485,6 @@ main {
                                     }
                                 }
                             }
-
                         }
                     }
                 }
@@ -545,7 +556,6 @@ main {
                     }
                 }
             }
-
         }
 
         /*==================#2-4 MOST POPULAR STYLE ==================*/
@@ -684,16 +694,441 @@ main {
                 }
             }
         }
-
     }
 }
 
-/*==================#3 LATEST STYLE ==================*/
+/*==================#3 SIDEBAR STYLE ==================*/
 /*====================================================*/
 aside {
     width: 33.597%;
     max-width: 410px;
-    position: sticky;
-    top: 5px;
+    height: 650vh;
     border-left: 1px solid rgb(207, 207, 207);
+    padding: 40px 0px 40px 15px;
+    margin-top: 50px;
+
+    >div {
+        padding: 0 10px 0 0;
+        position: sticky;
+        top: 15px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: start;
+        max-height: calc(100vh - 50px);
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        >div {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: start;
+            width: 100%;
+
+            /*==================#3-1 TWINS BUTTON STYLE ==================*/
+            &:first-of-type {
+                text-transform: capitalize;
+                position: relative;
+                height: 50px;
+                margin-bottom: 30px;
+
+                >a {
+                    font-family: manrope;
+                    padding: 10px 25px;
+                    border-radius: 50px;
+                    position: absolute;
+
+                    &:first-of-type {
+                        color: white;
+                        background-color: var(--bgblue);
+                        z-index: 2;
+                        left: 50%;
+                        transform: translateX(-90%);
+                    }
+
+                    &:last-of-type {
+                        color: var(--textblack);
+                        background-color: #e9e9e9;
+                        padding-left: 40px;
+                        border-radius: 0 50px 50px 0;
+                        left: 50%;
+                        transform: translateX(-15%);
+                    }
+                }
+            }
+
+            /*==================#3-2,4,6 SECTION 1 STYLE ==================*/
+            &:nth-of-type(2),
+            &:nth-of-type(4),
+            &:nth-of-type(6) {
+
+                >div {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 20px 0;
+
+                    >a {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-content: start;
+                        gap: 10px;
+                        width: 80%;
+                        transition: 0.4s;
+
+                        >span {
+                            font-family: manrope;
+                            font-size: 12px;
+                            line-height: 1;
+
+                            &:first-of-type {
+                                font-size: 18px;
+                                font-weight: 900;
+                            }
+
+                            &:nth-of-type(2) {
+                                font-size: 16px;
+                                font-weight: 300;
+                            }
+
+                            &:nth-of-type(3) {
+                                color: var(--textpurple);
+                            }
+                        }
+
+                        &:hover {
+
+                            >span {
+                                &:first-of-type {
+                                    text-decoration: underline;
+                                    text-decoration-color: var(--bgblue);
+                                }
+
+                                &:last-of-type {
+                                    text-shadow: 3px 3px 0 var(--bggreen);
+                                }
+                            }
+                        }
+                    }
+
+                    >img {
+                        width: 70px;
+                        height: 70px;
+                        object-fit: cover;
+                    }
+
+                    &:nth-of-type(2) {
+                        border-top: 1px solid var(--textlight2);
+                        border-bottom: 1px solid var(--textlight2);
+                    }
+
+                    &:nth-of-type(3) {
+                        border-bottom: 1px solid var(--textlight2);
+                    }
+                }
+            }
+
+            /*==================#3-3,5,7 QOUTES STYLE ==================*/
+            &:nth-of-type(3),
+            &:nth-of-type(5),
+            &:nth-of-type(7) {
+                display: flex;
+                flex-wrap: wrap;
+
+                >div {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: start;
+                    border-top: 1px solid rgb(207, 207, 207);
+                    border-bottom: 1px solid rgb(207, 207, 207);
+                    padding: 20px 0;
+
+                    >figure {
+                        display: flex;
+                        align-items: center;
+                        column-gap: 20px;
+                        margin-bottom: 15px;
+
+                        >img {
+                            width: 40px;
+                            height: 40px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                        }
+
+                        >figcaption {
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-content: center;
+                            text-transform: uppercase;
+                            row-gap: 3px;
+
+                            >span {
+                                width: 100%;
+                                font-size: 13px;
+
+                                &:first-of-type {
+                                    color: var(--textpurple);
+                                }
+
+                                &:last-of-type {
+                                    color: var(--textlight);
+                                }
+                            }
+                        }
+                    }
+
+                    >a {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-content: start;
+                        gap: 10px;
+
+                        >* {
+                            font-family: manrope;
+                            width: 100%;
+                        }
+
+                        >p {
+                            font-size: 15px;
+                            color: var(--textblack);
+                            font-weight: 900;
+
+                        }
+
+                        >span {
+                            font-size: 15px;
+                            font-weight: 300;
+                            color: var(--textlight);
+                        }
+
+                        >img {
+                            width: 100%;
+                            height: 250px;
+                            object-fit: cover;
+                        }
+
+                        &:hover {
+                            >p {
+                                text-decoration: underline;
+                                text-decoration-color: var(--bgblue);
+                                text-decoration-thickness: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            /*==================#3-8 SINGLE BUTTON STYLE ==================*/
+            &:nth-of-type(8) {
+                justify-content: center;
+                border: none;
+                margin-top: 20px;
+
+                >a {
+                    text-transform: uppercase;
+                    padding: 15px 30px;
+                    border: 1px solid var(--bgblue);
+                    font-size: 14px;
+                    transition: 0.4s;
+                    font-family: manrope;
+                    font-weight: 500;
+
+                    &:hover {
+                        background-color: var(--bgblue);
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*==================#4 FOOTER STYLE ==================*/
+/*====================================================*/
+footer {
+    width: 100%;
+    background-color: #131313;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    justify-content: center;
+    margin-top: 100px;
+
+    >section {
+        width: 100%;
+        display: flex;
+
+        /*==================#4-1 WEBSITES FOOTER STYLE ==================*/
+        &:first-of-type {
+            width: 100%;
+            max-width: 1100px;
+            padding: 100px 0;
+            flex-wrap: wrap;
+            align-content: start;
+            gap: 20px;
+
+            >div {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: end;
+                margin-bottom: 90px;
+
+                >a {
+                    width: 310px;
+                    height: 110px;
+
+                    >img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                >div {
+                    >a {
+                        font-size: 25px;
+                        color: var(--bggreen);
+
+                        >i {
+                            border: 1px solid var(--bggreen);
+                            padding: 7px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+
+            >nav {
+                width: 100%;
+
+                >ul {
+                    display: flex;
+                    column-gap: 10px;
+                    color: white;
+
+                    >li {
+                        >a {
+                            &:hover {
+                                text-decoration: underline;
+                                text-decoration-color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /*==================#4-2 AUTHOR SECTION STYLE ==================*/
+        &:last-of-type {
+            margin: 100px 0;
+
+            >* {
+                width: 50%;
+            }
+
+            >figure {
+                display: flex;
+                justify-content: center;
+
+                >img {
+                    width: 400px;
+                    height: 450px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    border: 1px solid rgba(255, 255, 255, 0.103);
+                    border-top: 1px solid white;
+                    border-left: 1px solid white;
+                }
+            }
+
+            >div {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                gap: 40px;
+
+                >div {
+                    color: white;
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    gap: 30px;
+
+                    /* me */
+                    &:first-of-type {
+                        >* {
+                            width: 100%;
+                        }
+
+                        >h4 {
+                            font-size: 32px;
+                        }
+
+                        >span {
+                            font-size: 20px;
+                            color: rgba(255, 255, 255, 0.829);
+                            margin-left: 150px;
+                        }
+                    }
+
+                    /* socials */
+                    &:last-of-type {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: -10px;
+                        gap: 30px;
+                        font-size: 30px;
+                        width: fit-content;
+                        padding: 18px 28px;
+                        border: 1px solid var(--textlight);
+                        border-radius: 10px;
+                        background: rgba(255, 255, 255, .03);
+                        backdrop-filter: blur(10px);
+                        overflow: hidden;
+
+                        >a {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: relative;
+                            transition: 0.4s;
+
+                            &::before {
+                                content: "";
+                                clip-path: polygon(30% 0, 70% 0, 100% 100%, 0% 100%);
+                                background-color: rgba(187, 187, 187, 0.39);
+                                width: 180%;
+                                height: 240%;
+                                position: absolute;
+                                top: -20px;
+                                animation: flicker 16s ease-in-out infinite;
+                                transition: 0.4s;
+                            }
+
+                            &:nth-of-type(2) {
+                                &::before {
+                                    animation-delay: 4s;
+                                }
+                            }
+
+                            &:nth-of-type(3) {
+                                &::before {
+                                    animation-delay: 8s;
+                                }
+                            }
+
+                            &:last-of-type {
+                                &::before {
+                                    animation-delay: 12s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
